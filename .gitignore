@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*.measure.json
+*_measured.png
