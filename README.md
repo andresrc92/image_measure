@@ -2,7 +2,17 @@
 
 A small Tkinter app for measuring things in an image: lengths, radii, angles, rectangles and polygon areas.
 
-## Run
+## Install on Ubuntu
+
+Download `image-measure_<version>_all.deb` from the [releases page](https://github.com/andresrc92/image_measure/releases) and run:
+
+```
+sudo apt install ./image-measure_<version>_all.deb
+```
+
+apt also installs the dependencies (`python3-tk`, `python3-pil`, `python3-pil.imagetk`). The app then appears in the applications menu as **Image Measure**, and runs from a terminal as `image-measure [image]`. Remove it with `sudo apt remove image-measure`.
+
+## Run from source
 
 ```
 pip install -r requirements.txt   # Tkinter ships with Python; on Debian/Ubuntu: apt install python3-tk
@@ -39,3 +49,11 @@ python3 image_measure.py [image]
 ```
 python3 -m unittest test_geometry
 ```
+
+## Build the .deb
+
+```
+packaging/build_deb.sh 0.1.0      # writes dist/image-measure_0.1.0_all.deb
+```
+
+`packaging/make_icon.py` regenerates `image-measure.png`.

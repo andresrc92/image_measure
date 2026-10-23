@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Image Measure
+Comment=Measure lengths, radii, angles and areas on an image
+Exec=image-measure %f
+Icon=image-measure
+Terminal=false
+Categories=Graphics;Viewer;
+MimeType=image/png;image/jpeg;image/bmp;image/tiff;image/gif;image/webp;
+StartupWMClass=Image-measure
+Keywords=measure;ruler;scale;calibration;radius;angle;

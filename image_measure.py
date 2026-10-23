@@ -976,7 +976,12 @@ class App:
 
 
 def main():
-    root = tk.Tk()
+    # The window class must match StartupWMClass in image-measure.desktop so the
+    # desktop groups the window under the app's launcher.
+    root = tk.Tk(className="image-measure")
+    icon = os.path.join(os.path.dirname(os.path.abspath(__file__)), "image-measure.png")
+    if os.path.exists(icon):
+        root.iconphoto(True, tk.PhotoImage(file=icon))
     App(root, sys.argv[1] if len(sys.argv) > 1 else None)
     root.mainloop()
 
